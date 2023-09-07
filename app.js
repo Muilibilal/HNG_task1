@@ -9,11 +9,13 @@ let formatting = (options) => {
   return new Intl.DateTimeFormat("en-US", options).format(new Date());
 };
 
-timeEl.innerText = formatting({
-  hour: "numeric",
-  minute: "numeric",
-  dayPeriod: "short",
-});
+setInterval(() => {
+  timeEl.innerText = formatting({
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  });
+}, 1000);
 
 dayEl.innerText = formatting({
   weekday: "long",
