@@ -1,0 +1,207 @@
+:root {
+  --fontSize: 16px;
+  --fontWeight: 500;
+  --fontFamily: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url(assets/sssplatter.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+}
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  min-height: 100vh;
+}
+
+.profile-details::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+
+/* .img-cont {
+  margin: 0 auto;
+  width: 200px;
+  & img {
+    max-width: 100%;
+  }
+} */
+
+.profile-text {
+  text-align: center;
+  & h3 {
+    font-size: 2rem;
+    font-weight: normal;
+  }
+
+  & span {
+    display: block;
+    width: 80%;
+    margin: 15px 0 15px 8%;
+    color: #4c4b4b;
+  }
+}
+
+.profile-record {
+  border-top: 2px solid #97979740;
+  text-align: center;
+  padding-top: 10px;
+
+  & p {
+    color: #4c4b4b;
+    margin-top: 5px;
+    position: relative;
+
+    & span {
+      color: initial;
+      font-weight: var(--fontWeight);
+      margin-left: 5px;
+    }
+  }
+}
+
+.profile-logo {
+  width: 50%;
+  max-width: 100%;
+  & img {
+    width: 70%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  /* .img-cont {
+    width: 150px;
+  } */
+
+  .profile-text {
+    & h3 {
+      font-size: 1.5rem;
+    }
+
+    & span {
+      font-size: 0.9rem;
+    }
+  }
+
+  .profile-record {
+    & p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .brand-logo {
+    & img {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  /*Small smartphones [325px -> 425px]*/
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .profile-details {
+    width: 100%;
+    min-height: fit-content;
+    clip-path: none;
+    box-shadow: none;
+  }
+
+  .img-cont {
+    width: 100px;
+  }
+
+  .profile-text {
+    & h3 {
+      font-size: 1.2rem;
+    }
+
+    & span {
+      font-size: 0.8rem;
+    }
+  }
+
+  .profile-record {
+    margin-bottom: 20px;
+    & p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .brand-logo {
+    width: 80%;
+    margin: 0 auto;
+    & img {
+      width: inherit;
+    }
+  }
+}
+
+/* External */
+.loader {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  position: absolute;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

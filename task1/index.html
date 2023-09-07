@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/LOGO.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/351a58a21e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Profile</title>
+  </head>
+  <body>
+    <main class="profile-card">
+      <section class="profile-details">
+        <div class="profile-text">
+          <h3 data-testid="slackUserName">Muili Bilal</h3>
+          <span data-testid="myTrack"
+            >I'm in the frontend track of the HNGx internship
+          </span>
+        </div>
+        <aside class="profile-record">
+          <p id="github" data-testid="githubURL">
+            Github Url:
+            <a href="https://github.com/Muilibilal" target="_blank"
+              >Muilibilal</a
+            >
+          </p>
+          <p id="day" data-testid="currentDayOfTheWeek">
+            Day: <span>Thursday, 7th of Sept 2023</span>
+          </p>
+          <p id="time" data-testid="currentUTCTime">Time: <span>5pm</span></p>
+        </aside>
+      </section>
+      <section class="profile-logo">
+        <img
+          src="assets/profile-img.jpeg"
+          alt="Muili Bilal"
+          data-testid="slackDisplayImage"
+        />
+      </section>
+    </main>
+  </body>
+</html>
